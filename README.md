@@ -1,6 +1,7 @@
-# - Personal github portfolio
+# Personal GitHub Portfolio
 
-https://github.com/Neural-Sorcerer/Neural-Sorcerer.github.io
+[GitHub Portfolio](https://neural-sorcerer.github.io/)<br>
+[GitHub Portfolio Repo](https://github.com/Neural-Sorcerer/Neural-Sorcerer.github.io)
 
 It is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
