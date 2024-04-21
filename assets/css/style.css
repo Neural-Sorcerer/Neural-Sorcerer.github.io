@@ -834,6 +834,8 @@ main {
  * skills 
  */
 
+.skill { margin-top: 30px; }
+
 .skills-title { margin-bottom: 20px; }
 
 .skills-list { padding: 20px; }
