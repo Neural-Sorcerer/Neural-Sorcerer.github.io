@@ -1,0 +1,93 @@
+/* Add some beauty */
+.service { margin-bottom: 0px; }
+
+/* Round images */
+.rounded-image {
+  border-radius: 25px;
+  padding-bottom: 5px;
+}
+
+/* Adjust small images */
+.modal-avatar-box { 
+  margin-top: 10px;
+}
+.modal-avatar-box img { 
+  border-radius: 6px;
+}
+
+/* Justify Text */
+.about-text {
+    text-align: justify;
+}
+.text-justify {
+  text-align: justify;
+}
+.testimonials-text {
+  text-align: justify;
+}
+
+/* Center headers */
+.content-card h4 {
+  text-align: center;
+}
+.content-card img { 
+  margin: auto;
+}
+
+.modal-content h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* Auto description line clamps */
+.testimonials-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 0;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Adjustment depends on the window size */
+.modal-avatar-box img {width: 80px;}
+
+@media (max-width: 580px) {
+  .modal-avatar-box img {display: none;}
+}
+
+@media (max-width: 450px) {
+  .content-card img { width: 200px; }
+}
+
+@media (min-width: 450px) {
+  .content-card img { width: 350px; }
+}
+
+@media (min-width: 580px) {
+  .content-card img { width: 350px; }
+}
+
+@media (min-width: 768px) {
+  .content-card img { width: 500px; }
+}
+
+@media (min-width: 1024px) {
+  .content-card img { width: 350px; }
+}
+
+
+
+/* Fix sidebar */
+@media (min-width: 580px) {
+  .sidebar { padding: 30px; }
+  .sidebar.active { max-height: 800px; }
+}
+
+@media (max-width: 580px) {
+  .sidebar.active { max-height: 800px; }
+}

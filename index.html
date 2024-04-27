@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style-overwrites.css">
 
   <!--
     - google font link
@@ -40,7 +41,6 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-
         <figure class="avatar-box">
           <img src="./assets/images/my-avatar.png" alt="Maksym (막심)" width="80">
         </figure>
@@ -54,17 +54,13 @@
           <span>Show Contacts</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
 
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
@@ -121,11 +117,13 @@
 
         </ul>
 
+
         <div class="separator"></div>
+
 
         <ul class="social-list">
 
-          <li class="social-item">
+          <li class="contacts-item">
             <a href="https://github.com/Neural-Sorcerer/" class="social-link">
 							<ion-icon name="logo-github" size="large" color="tertiary"></ion-icon>
             </a>
@@ -138,23 +136,22 @@
           </li>
 
         </ul>
-
+        
       </div>
 
     </aside>
 
 
 
-
-
+    
     <!--
-      - #main-content
+      - MAIN CONTENT
     -->
 
     <div class="main-content">
 
       <!--
-        - #NAVBAR
+        - NAVBAR
       -->
 
       <nav class="navbar">
@@ -190,7 +187,7 @@
 
 
       <!--
-        - #ABOUT
+        - ABOUT
       -->
 
       <article class="about  active" data-page="about">
@@ -198,6 +195,10 @@
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
+
+        <!--
+          - Briefly About Me Info
+        -->
 
         <section class="about-text">
           <p>
@@ -207,245 +208,368 @@
 						practical projects and research initiatives.
           </p>
         </section>
-
+        
         <!--
-          - service
+          - Insights Into My Activities
         -->
 
         <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
+          <h3 class="h3 service-title">Insights into my activities</h3>
           <ul class="service-list">
 
-            <li class="service-item">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/fields/Image-Processing.png" alt="Image Processing"
+                    class="rounded-image" data-testimonials-avatar>
+                </figure>
 
-              <!-- <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
-              </div> -->
+                <h4 class="h4" data-testimonials-title>Image Processing</h4>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Image Classification</h4>
-
-                <p class="service-item-text">
-                  Image classification is a task that involves classifying an image into different
-                  categories based on their content.
-                </p>
-
-                <p class="service-item-text">
-									The output of an image classifier is the confidence scores of predefined classes.
-                </p>
-
-                <p class="service-item-text" >
-									Image classification is useful when you need to know only what class an image belongs 
-									to and don't need to know where objects of that class are located or what their exact 
-									shape is.
-                </p>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Image Processing — a task that involves manipulating or enhancing images to improve their 
+                    quality or to extract useful information. The output of image processing can vary widely 
+                    depending on the application, from enhanced images with adjusted brightness and contrast 
+                    to complex transformations like feature extraction and noise reduction. For example, an 
+                    image processing operation might enhance a night time photograph by increasing its 
+                    brightness and reducing its graininess, or it might isolate and enhance certain features 
+                    in a medical image for better diagnostic visibility. Techniques used in image processing 
+                    include filtering, edge detection, image sharpening, and color adjustment. This field is 
+                    fundamental in a variety of applications across industries, including medical imaging, 
+                    surveillance, photography, and even in the preprocessing steps for more complex computer 
+                    vision tasks like object detection and classification. As a rule, for image processing 
+                    used libraries like OpenCV, Pillow, NumPy, TorchVision, etc.
+                  </p>
+                </div>
               </div>
-
             </li>
 
-            <li class="service-item">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/fields/Image-Classification.png" alt="Image Classification"
+                    class="rounded-image" data-testimonials-avatar>
+                </figure>
 
-              <!-- <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div> -->
+                <h4 class="h4" data-testimonials-title>Image Classification</h4>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Object Detection</h4>
-
-                <p class="service-item-text">
-                  Object detection is a task that involves identifying the location and class of objects 
-                  in an image or video stream and drawing bounding boxes around them.
-                </p>
-
-                <p class="service-item-text">
-                  The output of an object detector is a set of bounding boxes that enclose the objects in 
-                  the image, along with class labels and confidence scores for each box.
-                </p>
-
-                <p class="service-item-text">
-                  Object detection is a good choice when you need to identify objects of interest and 
-                  their location in the scene, but you don't need to know their exact shape.
-                </p>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Image classification — a task that involves assigning a label to an entire image based on 
+                    its content. The output of an image classification model is typically a set of confidence 
+                    scores for each category considered. These scores quantify how likely it is that the image 
+                    belongs to each category. For example, an image might be 80% likely to be a photo of a bird, 
+                    15% a plane, and 5% something else. This quantification is crucial for applications where 
+                    precision is important, such as in legal or medical settings, where you need a reliable 
+                    assessment of what the image contains.
+                  </p>
+                </div>
               </div>
-
             </li>
 
-            <li class="service-item">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Object Detection" class="rounded-image" data-testimonials-avatar>
+                </figure>
 
-              <!-- <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div> -->
+                <h4 class="h4" data-testimonials-title>Object Detection</h4>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Segmentation</h4>
-
-                <p class="service-item-text">
-                  Segmentation is a task that involves segmenting an image into different regions based 
-                  on the content of the image. Each region is assigned a label based on its content. 
-                  This task is useful in applications such as image segmentation and medical imaging.
-                </p>
-                
-                <p class="service-item-text">
-                  Instance segmentation goes a step further than object detection and involves identifying 
-                  individual objects in an image and segmenting them from the rest of the image.
-                </p>
-
-                <p class="service-item-text">
-                  The output of an instance segmentation model is a set of masks or contours that outline 
-                  each object in the image, along with class labels and confidence scores for each object.
-                  Instance segmentation is useful when you need to know not only where objects are in an 
-                  image, but also what their exact shape is.
-                </p>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Object Detection — a task that involves detecting all instances of objects from known 
+                    categories within an image. The output of an object detection model includes not only 
+                    the class labels but also the precise locations and boundaries of these objects, 
+                    represented by bounding boxes. Each bounding box is accompanied by a confidence score that 
+                    indicates the likelihood of the object belonging to a specific class. For instance, within 
+                    a street scene, a detection model might identify a bounding box around a car with a 90% 
+                    confidence score, a pedestrian with an 85% confidence score, and a traffic light with a 95% 
+                    confidence score. This additional layer of spatial information makes object detection more 
+                    complex and informative than basic image classification, as it provides not only what 
+                    objects are present but also where they are located in the space of the image.
+                  </p>
+                </div>
               </div>
-
             </li>
 
-            <li class="service-item">
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Segmentation" class="rounded-image" data-testimonials-avatar>
+                </figure>
 
-              <!-- <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div> -->
+                <h4 class="h4" data-testimonials-title>Segmentation</h4>
 
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Pose Estimation</h4>
-
-                <p class="service-item-text">
-                  Pose estimation is a task that involves identifying the location of specific points 
-                  in an image, usually referred to as keypoints. The keypoints can represent various 
-                  parts of the object such as joints, landmarks, or other distinctive features.
-                </p>
-
-                <p class="service-item-text">
-                  The output of a pose estimation model is a set of points that represent the keypoints 
-                  on an object in the image, usually along with the confidence scores for each point. 
-                </p>
-
-                <p class="service-item-text">
-                  Pose estimation is a good choice when you need to identify specific parts of an object 
-                  in a scene, and their location in relation to each other.
-                </p>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Segmentation — a task that involves dividing an image into segments to locate and understand 
+                    finer details and shapes of different objects within an image. The output of a segmentation 
+                    model is typically a pixel-wise mask for each object category, which provides a precise 
+                    outline of each object rather than just bounding boxes. Each segment in the mask is 
+                    associated with a class label that categorizes the type of object or region the segment 
+                    belongs to. For example, in an image of a park, segmentation might delineate the exact 
+                    contours of the grass, paths, benches, and people. This process not only identifies the 
+                    objects but also delineates their exact boundaries, providing a comprehensive understanding 
+                    of the spatial distribution of objects within the scene. Segmentation is especially useful 
+                    in medical imaging, autonomous driving, and any application requiring detailed analysis and 
+                    interaction with the environment at the pixel level.
+                  </p>
+                </div>
               </div>
+            </li>
 
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Pose Estimation" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Pose Estimation</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Pose Estimation — a task that involves identifying the positions and orientations of 
+                    various body parts of a subject within an image. The output of a pose estimation model is 
+                    typically a set of key points or landmarks that correspond to specific body joints, such 
+                    as elbows, knees, and shoulders. Each key point is associated with a confidence score that 
+                    reflects the accuracy with which the model believes it has located the point. For example, 
+                    in an image of a dancer, pose estimation might identify the positions of the wrists, ankles, 
+                    and head with varying confidence levels, like 95% for the head, 90% for the wrists, and 85% 
+                    for the ankles. These key points are often connected to form a skeleton that maps out the 
+                    pose of the person. Pose estimation is crucial in applications such as augmented reality, 
+                    sports analytics, and animation, where understanding the precise arrangement of a human's 
+                    body in space is vital for further processing and analysis.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Optical Character Recognition (OCR)" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Optical Character Recognition (OCR)</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Optical Character Recognition (OCR) — a task that involves converting different types of 
+                    text from scanned documents, images, or video streams into machine-encoded text. The output 
+                    of an OCR system is a digital representation of the printed or handwritten characters it 
+                    identifies within the source material. For instance, an OCR application might scan a 
+                    handwritten letter and output the transcribed text with high accuracy, allowing the 
+                    contents to be edited, searched, and stored digitally. This technology is essential for 
+                    digitizing printed documents, automating data entry, and enhancing accessibility, such as 
+                    reading text aloud for the visually impaired. OCR is widely used in various applications, 
+                    including processing bank checks, automating passport recognition, and extracting 
+                    information from invoices and receipts for efficient business operations.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Generative Models" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Generative Models</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Generative Models — a task that involves creating new data instances that resemble the 
+                    training data, often used to generate images, text, or music that mimics the style and 
+                    characteristics of the original dataset. The output of generative models can be diverse, 
+                    ranging from entirely new images of human faces to synthesized sequences of music or 
+                    realistic dialogues for virtual assistants. For example, a generative model trained on 
+                    classical paintings might produce new artworks that capture the unique style and color 
+                    palette of historical periods without directly copying any existing work. These models, 
+                    such as Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs), learn 
+                    the underlying distribution of the data to produce high-quality, innovative outputs. 
+                    Generative models are increasingly important in fields like entertainment, where they can 
+                    create new content, and in privacy, where they can generate synthetic data for training 
+                    other AI systems without using sensitive real-world data.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Super Resolution" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Super Resolution</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Super Resolution — a task that involves enhancing the resolution of an image or video, 
+                    making it sharper and more detailed than the original low-resolution input. The output of 
+                    a super resolution model is a high-resolution image that maintains the integrity of the 
+                    original content while adding clarity and details that were not perceptible in the 
+                    lower-resolution version. For example, a super resolution system might take a blurry, 
+                    pixelated photo and transform it into a clear, detailed image where finer features like 
+                    text, textures, and edges are significantly enhanced. This process involves sophisticated 
+                    image processing algorithms, often using deep learning techniques, to predict and add 
+                    high-frequency details that are plausible based on the data the model has learned from. 
+                    Super resolution is particularly valuable in fields like satellite imaging, where it can 
+                    improve the quality of images taken from space, and in consumer electronics, enhancing the 
+                    viewing experience by upgrading the content to higher resolutions on TVs and smartphones.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Anomaly Detection" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Anomaly Detection</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Anomaly Detection — a task that involves identifying unusual patterns or anomalies within 
+                    visual data that deviate from the norm. The output of a computer vision anomaly detection 
+                    system is typically an alert or a visual indicator highlighting anomalous regions within 
+                    images or video frames. For example, in a factory setting, an anomaly detection system 
+                    might scan images from an assembly line to identify defects in products such as chips in 
+                    ceramics or irregular stitching in textiles. Similarly, in surveillance, it can detect 
+                    unexpected behaviors or unusual objects within a monitored area, such as an unattended bag 
+                    in a public space. These systems leverage complex algorithms, often based on convolutional 
+                    neural networks or autoencoders, trained on vast amounts of normal images to learn what 
+                    typical content looks like so they can effectively spot deviations. Anomaly detection in 
+                    computer vision is indispensable in quality control, security surveillance, and healthcare 
+                    diagnostics, where spotting abnormalities accurately and quickly can have significant 
+                    implications.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Action Recognition" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Action Recognition</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Action Recognition — a task that involves analyzing sequences of images or video to 
+                    identify specific actions or behaviors performed by objects or people. The output of an 
+                    action recognition system is a label or a series of labels that describe the actions 
+                    taking place in the video, along with a confidence score for each label. For example, in a 
+                    sports analysis setting, an action recognition system might classify various movements of 
+                    athletes, such as running, jumping, or throwing, providing insights into performance 
+                    dynamics. In a security context, it could detect actions like fighting or suspicious 
+                    behaviors, triggering alerts for human review. Action recognition is critical in areas 
+                    such as sports coaching, surveillance, and interactive gaming, where understanding complex 
+                    motions and interactions is key to the application’s success.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/fields/Depth-Estimation.png" alt="Depth Estimation"
+                    width="350" height="350" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Depth Estimation</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Depth Estimation — a task that involves determining the distance of each point in an image 
+                    from the camera lens, effectively mapping out the 3D structure of the scene captured in a 
+                    2D image. The output of a depth estimation system is a depth map, where each pixel carries 
+                    a value that represents its distance relative to the viewer. For example, in autonomous 
+                    vehicle technology, depth estimation helps in perceiving the distances to various objects 
+                    around the vehicle, such as other cars, pedestrians, and road signs, facilitating safe 
+                    navigation and decision-making. These systems typically use stereo images, time-of-flight 
+                    sensors, or single images processed with deep learning techniques, leveraging convolutional 
+                    neural networks to predict depth from visual cues. Depth estimation is crucial for 
+                    applications requiring spatial understanding, such as robotic navigation, augmented reality, 
+                    and advanced photography, where depth information adds a significant layer of functionality 
+                    and user experience.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+      
+                <figure>
+                  <img src="./assets/images/4.png" alt="Model Optimization" class="rounded-image" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4" data-testimonials-title>Model Optimization</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Model Optimization in Computer Vision — a task that involves refining and tuning machine 
+                    learning models to enhance performance and efficiency, especially critical for deploying 
+                    models on devices with limited computational power or storage. The most essential 
+                    optimization techniques like: qantisation, pruning, knowledge distillation are addresses 
+                    specific needs in deploying computer vision models, making them essential tools for 
+                    developers looking to bring advanced vision capabilities to everyday devices and 
+                    applications.
+                  </p>
+                  <p>
+                    <b>Quantization</b> — a optimization technique that converts a model's weights and activation functions from 
+                    floating-point representation to lower-precision formats, such as integers. The output of 
+                    quantization is a lighter model that requires less memory and computational power, enabling 
+                    faster processing and reduced latency. For example, a quantized model can perform real-time 
+                    object detection on mobile devices without relying on cloud computing.
+                  </p>
+                  <p>
+                    <b>Pruning</b> — a optimization technique that involves systematically removing less important weights or neurons 
+                    from a model's architecture. The result is a sparser, streamlined model that retains most 
+                    of its accuracy while being significantly faster and smaller. This is especially useful in 
+                    edge computing scenarios, like surveillance cameras, where processing needs to be done 
+                    locally and efficiently.
+                  </p>
+                  <p>
+                    <b>Knowledge Distillation</b> — a optimization technique that involves training a smaller, less complex 
+                    model (student) to mimic the behavior of a larger, more complex model (teacher). The output 
+                    is a compact model that achieves similar performance to the teacher model but with a 
+                    fraction of its size and computational demand. Knowledge distillation is particularly 
+                    valuable when deploying sophisticated AI algorithms in real-time applications, such as 
+                    facial recognition in smartphones.
+                  </p>
+                </div>
+              </div>
             </li>
 
           </ul>
-
         </section>
 
-
         <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
+          - Jumping Window Modal Container
         -->
 
         <div class="modal-container" data-modal-container>
-
           <div class="overlay" data-overlay></div>
-
           <section class="testimonials-modal">
 
             <button class="modal-close-btn" data-modal-close-btn>
@@ -454,84 +578,19 @@
 
             <div class="modal-img-wrapper">
               <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+                <img data-modal-img>
               </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+              <img src="./assets/images/icon-quote.svg" alt="Quote Icon">
             </div>
 
             <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
+              <h3 class="h3 modal-title" data-modal-title></h4>
+              <!-- <time datetime="2021-06-14">14 June, 2021</time> -->
+              <div class="text-justify" data-modal-text></div>
             </div>
 
           </section>
-
         </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
 
       </article>
 
@@ -540,7 +599,7 @@
 
 
       <!--
-        - #RESUME
+        - RESUME
       -->
 
       <article class="resume" data-page="resume">
@@ -660,25 +719,21 @@
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Experience</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">DeltaX</h4>
               <span>Jan 2023 — Present</span>
               <!-- <span>Team Leader | Senior AI Researcher & Engineer</span> -->
               <p class="timeline-text">
                 Team Leader | Senior AI Researcher & Engineer
               </p>
-
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">DeltaX</h4>
               <span>Sep 2021 — Dec 2022</span>
               <!-- <span>AI Researcher & Engineer</span> -->
@@ -688,7 +743,6 @@
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Soongsil University Laboratory</h4>
               <span>Sept 2018 — Feb 2021</span>
               <!-- <span>AI Researcher & Engineer</span> -->
@@ -707,54 +761,45 @@
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Soongsil University</h4>
               <span>Sep 2018 — Feb 2021</span>
               <p class="timeline-text">
                 Master's degree, Computer Science and Engineering</br>
                 Grade: 4.24/4.5 or 95.5/100 Score
               </p>
-
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Chungnam National University</h4>
               <span>Sep 2017 — Aug 2018</span>
               <p class="timeline-text">
                 Korean Language and culture</br>
                 Grade: TOPIK 4
               </p>
-
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">National Technical University "Kharkiv Polytechnic Institute"</h4>
               <span>Sep 2012 — Aug 2017</span>
               <p class="timeline-text">
                 Bachelor's degree, Computer Science and Engineering</br>
                 Grade: 4.26/4.5 or 96/100 Score
               </p>
-
             </li>
 
             <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">Lisichansk Multidisciplinary Lyceum</h4>
               <span>Sep 2008 — Aug 2012</span>
               <p class="timeline-text">
                 High School Diploma, Information Technologies</br>
                 Grade: Red diploma
               </p>
-
             </li>
 
           </ol>
@@ -762,13 +807,11 @@
         </section>
 
         <section class="skill">
-
           <h3 class="h3 skills-title">Area of Expertise</h3>
 
           <ul class="skills-list content-card">
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Python</h5>
                 <data value="100">100%</data>
@@ -777,11 +820,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Deep Learning | Computer Vision</h5>
                 <data value="100">100%</data>
@@ -790,11 +831,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Image Processing</h5>
                 <data value="100">100%</data>
@@ -803,11 +842,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Image Classification</h5>
                 <data value="100">100%</data>
@@ -816,11 +853,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Object Detection</h5>
                 <data value="95">95%</data>
@@ -829,11 +864,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Segmentation (Semantic | Instance | Panoptic)</h5>
                 <data value="95">95%</data>
@@ -842,11 +875,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Keypoints Detection (Pose Estimation | Facial Landmarks)</h5>
                 <data value="95">95%</data>
@@ -855,11 +886,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Facial Attribute Recognition</h5>
                 <data value="90">95%</data>
@@ -868,11 +897,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Optical Character Recognition (OCR)</h5>
                 <data value="95">95%</data>
@@ -881,11 +908,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
             
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Object Tracking</h5>
                 <data value="95">95%</data>
@@ -894,11 +919,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Generative Models</h5>
                 <data value="75">75%</data>
@@ -907,11 +930,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 75%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Super Resolution</h5>
                 <data value="90">90%</data>
@@ -920,11 +941,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 90%;"></div>
               </div>
-
             </li>
             
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Anomaly Detection</h5>
                 <data value="85">85%</data>
@@ -933,11 +952,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Action Recognition</h5>
                 <data value="75">75%</data>
@@ -946,11 +963,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 75%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Depth Estimation</h5>
                 <data value="65">65%</data>
@@ -959,11 +974,9 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 65%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
                 <h5 class="h5">Model Optimization (Quantisation | Pruning | Knowledge Distillation)</h5>
                 <data value="95">95%</data>
@@ -972,8 +985,8 @@
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
-
             </li>
+
           </ul>
 
         </section>
@@ -1047,7 +1060,7 @@
 
 
       <!--
-        - #PORTFOLIO
+        - PORTFOLIO ***
       -->
 
       <article class="portfolio" data-page="portfolio">
@@ -1287,7 +1300,7 @@
 
 
       <!--
-        - #BLOG
+        - BLOG ***
       -->
 
       <article class="blog" data-page="blog">
@@ -1479,7 +1492,7 @@
 
 
       <!--
-        - #CONTACT
+        - CONTACT
       -->
 
       <article class="contact" data-page="contact">
