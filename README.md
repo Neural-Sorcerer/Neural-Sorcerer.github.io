@@ -8,5 +8,5 @@ It is a fully responsive personal portfolio website, responsive for all devices,
 
 ## Demo
 
-![vCard Desktop Demo](./assets/images/website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./assets/images/website-demo-image/mobile.png "Mobile Demo")
+![vCard Desktop Demo](./assets/images/source/desktop.png "Desktop Demo")
+![vCard Mobile Demo](./assets/images/source/mobile.png "Mobile Demo")
