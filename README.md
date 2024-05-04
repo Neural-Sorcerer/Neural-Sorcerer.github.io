@@ -1,7 +1,8 @@
 # Personal GitHub Portfolio
 
-[GitHub Portfolio](https://neural-sorcerer.github.io/)<br>
-[GitHub Portfolio Repo](https://github.com/Neural-Sorcerer/Neural-Sorcerer.github.io)
+[GitHub Website Portfolio](https://neural-sorcerer.github.io/)<br>
+[GitHub Reference Portfolio Repo](https://github.com/codewithsadee/vcard-personal-portfolio)
+
 
 It is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
