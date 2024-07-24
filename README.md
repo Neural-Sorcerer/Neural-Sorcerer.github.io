@@ -10,3 +10,7 @@ It is a fully responsive personal portfolio website, responsive for all devices,
 
 ![vCard Desktop Demo](./assets/images/source/desktop.png "Desktop Demo")
 ![vCard Mobile Demo](./assets/images/source/mobile.png "Mobile Demo")
+
+## Editing through VScode
+1. Install ``Live Server`` Extension
+2. Run ``Go Live``
