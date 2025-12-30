@@ -1,30 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap');
+
+@theme {
+  --color-obsidian-dark: #0B0C10;
+  --color-obsidian-light: #1F2833;
+  --color-neon-cyan: #45A29E;
+  --color-neon-teal: #66FCF1;
+  --color-dim-white: #C5C6C7;
+
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: "Outfit", sans-serif;
+
+  --background-image-subtle-grid: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
 
 :root {
-  background-color: #030305; /* space-black */
-  color: #f3f4f6; /* gray-100 */
+  background-color: #0B0C10;
+  color: #C5C6C7;
 }
 
 @layer base {
   body {
-    @apply antialiased overflow-x-hidden;
-    font-family: 'Inter', sans-serif;
+    @apply antialiased overflow-x-hidden bg-obsidian-dark selection:bg-neon-teal selection:text-obsidian-dark;
+    font-family: var(--font-sans);
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-white;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #0a0a12; 
+  background: var(--color-obsidian-dark);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46; 
-  border-radius: 4px;
+  background: var(--color-obsidian-light);
+  border-radius: 99px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #4c1d95; 
+  background: var(--color-neon-cyan);
 }

@@ -2,67 +2,74 @@ import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
-export default function LatentSpace({ count = 3000 }) {
+export default function LatentSpace({ count = 2000 }) {
     const mesh = useRef()
-    const light = useRef()
 
-    // Generate random particles resembling a high-dim latent space projected to 3D
     const particles = useMemo(() => {
         const temp = []
         for (let i = 0; i < count; i++) {
-            const t = Math.random() * 100
-            const factor = 20 + Math.random() * 100
-            const speed = 0.01 + Math.random() / 200
-            const xFactor = -50 + Math.random() * 100
-            const yFactor = -50 + Math.random() * 100
-            const zFactor = -50 + Math.random() * 100
-            temp.push({ t, factor, speed, xFactor, yFactor, zFactor, mx: 0, my: 0 })
+            // Distribution: Sphere-like but stretched
+            const r = Math.random() * 30 + 10
+            const theta = Math.random() * Math.PI * 2
+            const phi = Math.acos(2 * Math.random() - 1)
+
+            const x = r * Math.sin(phi) * Math.cos(theta)
+            const y = r * Math.sin(phi) * Math.sin(theta)
+            const z = (r * Math.cos(phi)) * 0.5 // Flattened slightly
+
+            temp.push({
+                x, y, z,
+                initialX: x, initialY: y, initialZ: z,
+                speed: 0.2 + Math.random() * 0.5,
+                offset: Math.random() * 100
+            })
         }
         return temp
     }, [count])
 
-    // Dummy object for efficient instanced mesh updates
     const dummy = useMemo(() => new THREE.Object3D(), [])
+    const color1 = new THREE.Color("#45A29E") // Neon Cyan
+    const color2 = new THREE.Color("#66FCF1") // Neon Teal
+    const color3 = new THREE.Color("#C5C6C7") // Dim White
 
     useFrame((state) => {
         if (!mesh.current) return
+        const time = state.clock.getElapsedTime()
 
         particles.forEach((particle, i) => {
-            let { t, factor, speed, xFactor, yFactor, zFactor } = particle
+            // Gentle floating motion around initial position
+            const { initialX, initialY, initialZ, speed, offset } = particle
 
-            // Update time
-            t = particle.t += speed / 2
-            const time = state.clock.getElapsedTime()
+            const movedX = initialX + Math.sin(time * speed * 0.2 + offset) * 2
+            const movedY = initialY + Math.cos(time * speed * 0.2 + offset) * 2
+            const movedZ = initialZ + Math.sin(time * speed * 0.1 + offset) * 2
 
-            // Organic movement: Lisajous-like curves + noise
-            const x = Math.cos(t) + Math.sin(t * 1) / 10 + xFactor + Math.cos(time / 10) * (i % 10)
-            const y = Math.sin(t) + Math.cos(t * 2) / 10 + yFactor + Math.sin(time / 10) * (i % 10)
-            const z = Math.cos(t) + Math.sin(t * 3) / 10 + zFactor + Math.cos(time / 20)
+            dummy.position.set(movedX, movedY, movedZ)
 
-            // Mouse interaction (repulsion/attraction)
-            // Convert normalized mouse coords (-1 to 1) to world space approximation if needed
-            // detailed interaction logic can go here
-
-            dummy.position.set(x, y, z)
-
-            // Scale based on distance or arbitrary factor
-            const s = Math.cos(t)
+            // Pulse scale
+            const s = (Math.sin(time * 2 + offset) + 2) * 0.08 // Much smaller particles
             dummy.scale.set(s, s, s)
-            dummy.rotation.set(s * 5, s * 5, s * 5)
+            dummy.rotation.set(s, s, s)
 
             dummy.updateMatrix()
-
             mesh.current.setMatrixAt(i, dummy.matrix)
+
+            // Color variation based on position
+            const color = i % 3 === 0 ? color1 : i % 3 === 1 ? color2 : color3
+            mesh.current.setColorAt(i, color)
         })
+
         mesh.current.instanceMatrix.needsUpdate = true
+        if (mesh.current.instanceColor) mesh.current.instanceColor.needsUpdate = true
     })
 
     return (
         <>
-            <pointLight ref={light} distance={40} intensity={8} color="#4c1d95" />
+            <ambientLight intensity={0.2} />
+            <pointLight position={[10, 10, 10]} intensity={1} color="#66FCF1" />
             <instancedMesh ref={mesh} args={[null, null, count]}>
-                <dodecahedronGeometry args={[0.2, 0]} />
-                <meshPhongMaterial color="#06b6d4" transparent opacity={0.6} />
+                <icosahedronGeometry args={[1, 0]} /> {/* Clean geometry */}
+                <meshBasicMaterial transparent opacity={0.8} toneMapped={false} />
             </instancedMesh>
         </>
     )
