@@ -7,6 +7,10 @@
   padding-bottom: 5px;
 }
 
+.avatar-box img {
+  border-radius: 20px;
+}
+
 /* Adjust small images */
 .modal-avatar-box { 
   margin-top: 10px;
