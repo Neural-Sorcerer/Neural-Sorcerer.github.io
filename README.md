@@ -1,16 +1,61 @@
-# React + Vite
+# Neural Sorcerer | AI & Computer Vision Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Three.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
 
-Currently, two official plugins are available:
+> **"Architecting Vision Systems & Latent Geometries for the physical world."**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A high-performance, interactive portfolio website built for a Senior AI Engineer specializing in Computer Vision, 3D Geometry, and Deep Learning. Features a custom 3D latent space visualization, premium dark aesthetics, and fluid animations.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+-   **3D Hero Visualization**: Interactive particle system representing high-dimensional latent spaces.
+-   **Modern Tech Stack**: Built with **Vite**, **React**, and **Tailwind CSS v4** for blazing fast performance.
+-   **Responsive Design**: Fully responsive layout with a "mobile-first" approach.
+-   **Premium Aesthetics**: Custom "Obsidian & Neon Teal" color palette with glassmorphism effects.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Installation & Setup
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Neural-Sorcerer/Neural-Sorcerer.github.io.git
+    cd Neural-Sorcerer.github.io
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 📦 Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
+```
+
+The output will be in the `dist/` directory, ready for deployment.
+
+## 🚢 Deployment
+
+This project is configured for **GitHub Pages**.
+
+-   Any push to `main` triggers a GitHub Action.
+-   The workflow builds the project and deploys the `dist` folder to the `gh-pages` branch.
+
+---
+
+<p align="center">
+  Built with ❤️ by <a href="https://github.com/Neural-Sorcerer">Neural Sorcerer</a>
+</p>
