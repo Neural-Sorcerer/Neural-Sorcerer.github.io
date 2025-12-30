@@ -1,8 +1,7 @@
 # Personal GitHub Portfolio
 
-[GitHub Website Portfolio](https://neural-sorcerer.github.io/)<br>
+[GitHub Website Portfolio](https://neural-sorcerer.github.io/)</br>
 [GitHub Reference Portfolio Repo](https://github.com/codewithsadee/vcard-personal-portfolio)
-
 
 It is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
@@ -12,5 +11,6 @@ It is a fully responsive personal portfolio website, responsive for all devices,
 ![vCard Mobile Demo](./assets/images/source/mobile.png "Mobile Demo")
 
 ## Editing through VScode
+
 1. Install ``Live Server`` Extension
 2. Run ``Go Live``
