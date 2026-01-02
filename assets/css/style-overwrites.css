@@ -95,3 +95,15 @@
 @media (max-width: 580px) {
   .sidebar.active { max-height: 800px; }
 }
+
+/* In-progress section styling */
+.navbar-link.in-progress {
+  color: var(--light-gray) !important;
+  opacity: 0.6;
+}
+
+.navbar-link.in-progress:hover,
+.navbar-link.in-progress:focus {
+  color: var(--orange-yellow-crayola) !important;
+  opacity: 1;
+}
