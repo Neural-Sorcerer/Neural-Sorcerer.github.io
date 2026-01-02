@@ -1,5 +1,7 @@
 /* Add some beauty */
-.service { margin-bottom: 0px; }
+.service {
+  margin-bottom: 0px;
+}
 
 /* Round images */
 .rounded-image {
@@ -12,20 +14,23 @@
 }
 
 /* Adjust small images */
-.modal-avatar-box { 
+.modal-avatar-box {
   margin-top: 10px;
 }
-.modal-avatar-box img { 
+
+.modal-avatar-box img {
   border-radius: 6px;
 }
 
 /* Justify Text */
 .about-text {
-    text-align: justify;
+  text-align: justify;
 }
+
 .text-justify {
   text-align: justify;
 }
+
 .testimonials-text {
   text-align: justify;
 }
@@ -34,7 +39,8 @@
 .content-card h4 {
   text-align: center;
 }
-.content-card img { 
+
+.content-card img {
   margin: auto;
 }
 
@@ -58,52 +64,61 @@
 
 
 /* Adjustment depends on the window size */
-.modal-avatar-box img {width: 80px;}
+.modal-avatar-box img {
+  width: 80px;
+}
 
 @media (max-width: 580px) {
-  .modal-avatar-box img {display: none;}
+  .modal-avatar-box img {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {
-  .content-card img { width: 200px; }
+  .content-card img {
+    width: 200px;
+  }
 }
 
 @media (min-width: 450px) {
-  .content-card img { width: 350px; }
+  .content-card img {
+    width: 350px;
+  }
 }
 
 @media (min-width: 580px) {
-  .content-card img { width: 350px; }
+  .content-card img {
+    width: 350px;
+  }
 }
 
 @media (min-width: 768px) {
-  .content-card img { width: 500px; }
+  .content-card img {
+    width: 500px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .content-card img { width: 350px; }
+  .content-card img {
+    width: 350px;
+  }
 }
 
 
 
 /* Fix sidebar */
 @media (min-width: 580px) {
-  .sidebar { padding: 30px; }
-  .sidebar.active { max-height: 800px; }
+  .sidebar {
+    padding: 30px;
+  }
+
+  .sidebar.active {
+    max-height: 800px;
+  }
 }
 
 @media (max-width: 580px) {
-  .sidebar.active { max-height: 800px; }
-}
-
-/* In-progress section styling */
-.navbar-link.in-progress {
-  color: var(--light-gray) !important;
-  opacity: 0.6;
-}
-
-.navbar-link.in-progress:hover,
-.navbar-link.in-progress:focus {
-  color: var(--orange-yellow-crayola) !important;
-  opacity: 1;
+  .sidebar.active {
+    max-height: 800px;
+  }
 }
