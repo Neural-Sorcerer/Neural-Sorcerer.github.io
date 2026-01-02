@@ -157,3 +157,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Vanta.js Background Initialization
+document.addEventListener('DOMContentLoaded', () => {
+  const vantaBg = document.getElementById('vanta-bg');
+  if (vantaBg) {
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: false,
+      touchControls: false,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xffd770,
+      backgroundColor: 0x202022,
+      points: 20.00,
+      maxDistance: 20.00,
+      spacing: 20.00
+    })
+  }
+});
